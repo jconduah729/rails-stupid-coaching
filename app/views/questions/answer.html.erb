@@ -1,0 +1,12 @@
+<h1>Questions#answer</h1>
+<%= @answer = params[:question]%>
+<%if @answer.include? "?"%>
+<%return "Silly Question, get dressed and go to work!"%>
+<%elsif @answer == "I am going to work"%>
+ <p>"Great!"</p>
+<% else %>
+  return "I don't care, get dressed and go to work!"
+<% end %>
+<%= link_to "Ask another question!", ask_path %>
+
+
